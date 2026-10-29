@@ -16,3 +16,23 @@ h1,h2,h3,.section h2,.path h3,.article h2,.timeline h3{font-family:'Libre Basker
 .art-credit a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:900px){.hero{padding:56px 32px;gap:20px;grid-template-columns:minmax(0,1.6fr) minmax(0,.6fr)}.hero .actions{flex-wrap:wrap}}
 @media(max-width:620px){.hero{display:block;padding:48px 25px;min-height:0;background-image:linear-gradient(90deg,rgba(16,31,52,.94),rgba(16,31,52,.78)),url('spurgeon-surrey.jpg');background-position:center;background-size:cover}.hero-art{display:none}.hero h1{font-size:38px;letter-spacing:-1px}.art-credit{text-align:left;padding:12px 25px}}
+
+/* Navigation éditoriale et crédit intégré à la gravure. */
+header{max-width:none;padding:24px max(28px,calc((100% - 1280px)/2));gap:30px;border-bottom:3px solid var(--navy);flex-wrap:wrap}
+header .brand{flex-shrink:0}
+header nav{gap:8px;flex-wrap:wrap;align-items:center}
+header nav a{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:12px 16px;border:1px solid #c9c9c2;border-radius:4px;font-family:'Libre Baskerville',Georgia,serif;font-size:12px;font-weight:700;color:var(--navy);background:transparent;transition:background .18s,color .18s,border-color .18s}
+header nav a:hover{background:#e9e4d8;border-color:var(--navy);color:var(--navy)}
+header nav a[aria-current="page"]{background:var(--navy);border-color:var(--navy);color:var(--paper);box-shadow:inset 0 -3px 0 #b6a179}
+header nav .nav-quiz{background:#e7decb;border-color:#c2af88}
+header nav .nav-quiz:hover{background:#d9c8a8}
+.hero{position:relative;padding-bottom:106px}
+.hero .actions .text-link{display:inline-flex;align-items:center;justify-content:center;min-height:49px;border:1px solid #c9cdd2;border-radius:3px;padding:15px 20px;background:rgba(16,31,52,.25)}
+.hero .actions .text-link:hover{background:rgba(246,242,233,.12)}
+.hero .button{border-radius:3px}
+.hero .art-credit{position:absolute;bottom:0;left:0;right:0;padding:14px 28px;margin:0;border:0;background:linear-gradient(0deg,rgba(10,22,39,.93),rgba(10,22,39,.65));color:#f6f2e9;font:11px/1.8 Arial,sans-serif;text-align:right}
+.hero .art-credit a{color:#f6f2e9}
+.hero .art-credit a:focus-visible{outline-color:#f6f2e9}
+@media(max-width:1100px){header{align-items:flex-start;flex-direction:column;gap:22px}}
+@media(max-width:620px){header{padding:22px 20px;gap:20px}header nav{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}header nav a{padding:12px 9px;font-size:11px}header nav .nav-quiz{grid-column:1/-1}.hero{padding-bottom:128px}.hero .art-credit{text-align:left;padding:13px 25px}.hero .actions{align-items:stretch;gap:14px}}
+@media(prefers-reduced-motion:reduce){header nav a{transition:none}}
