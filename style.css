@@ -113,3 +113,19 @@ body:has(.chapter-reading-layout) .page-top h1{font-size:clamp(32px,4vw,48px);li
 .confession-paragraph{margin-bottom:40px}.chapter-article .confession-paragraph p{margin-bottom:20px}.scripture-notes{font:14px/1.9 Baskerville,'Libre Baskerville',Georgia,serif;color:#5c625f;border-top:1px solid var(--line);padding:18px 0 0 28px;margin-top:26px}.scripture-notes li{padding:3px 8px;scroll-margin-top:30px;border-radius:3px}.scripture-notes li::marker{color:var(--navy);font-weight:700}.footnote-marker{border:0;background:none;color:var(--navy);font:700 11px/1.5 Arial,sans-serif;padding:3px 5px;cursor:pointer;vertical-align:baseline;text-decoration:underline;text-underline-offset:2px}.footnote-marker:hover{background:#e5dfd1}.note-highlight{background:#e7decb;color:#182c49}.testament-heading{display:block;font-size:16px;line-height:1.8;color:var(--navy);margin:22px 0 10px}.chapter-source{font:12px/1.9 Arial,sans-serif;color:#6c695f;border-left:2px solid #b29d78;padding-left:18px;margin-top:35px}@media(max-width:620px){.scripture-notes{font-size:13px}.footnote-marker{padding:7px 8px}}
 
 .edition-warning{margin:28px 0;padding:20px 24px;background:#f1dfdb;border-left:3px solid #8b332c;font-size:14px;line-height:1.8;color:#71332c}.edition-warning p{margin:10px 0}.edition-warning a,.chapter-source a{text-decoration:underline;text-underline-offset:3px}.chapter-pagination a{max-width:100%;overflow-wrap:anywhere}
+
+/* Cartes de chapitres : petites couvertures éditoriales. */
+.chapter-grid{gap:22px;margin-top:28px}
+.chapter-tile{min-height:250px;padding:30px 23px 23px;border:1px solid #c3b69b;border-radius:5px;background:linear-gradient(145deg,#fcf9f2,#eee8db);box-shadow:0 3px 8px rgba(24,44,73,.045);isolation:isolate;transition:border-color .18s,box-shadow .18s,transform .18s,background .18s}
+.chapter-tile:before{content:"";position:absolute;inset:7px;border:1px solid rgba(174,150,106,.30);border-radius:2px;pointer-events:none;z-index:-1}
+.chapter-tile .chapter-caption{font:700 11px/1.7 Arial,sans-serif;text-transform:uppercase;letter-spacing:2px;color:#75613e}
+.chapter-tile .chapter-rule{width:32px;height:2px;background:#ac9365;margin:15px 0 0}
+.chapter-tile h2{font-size:20px;line-height:1.5;letter-spacing:-.4px;margin:19px 0 20px}
+.chapter-arrow{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid #c3b69b;border-radius:50%;font:19px/1 Georgia,serif;color:#182c49;margin-top:auto;background:#f8f4ea}
+.chapter-edition{font:10px/1.7 Arial,sans-serif;color:#8b332c;margin:0 0 14px}
+.chapter-tile:hover{transform:translateY(-3px);border-color:#182c49;background:linear-gradient(145deg,#f8f5ee,#e4e8eb);box-shadow:0 9px 18px rgba(24,44,73,.1)}
+.chapter-tile:hover .chapter-arrow,.chapter-tile:focus-visible .chapter-arrow{background:#182c49;color:#f6f2e9;border-color:#182c49}
+.chapter-tile:focus-visible{outline:3px solid #182c49;outline-offset:4px}
+@media(max-width:700px){.chapter-grid{gap:14px}.chapter-tile{min-height:230px;padding:26px 17px 20px}.chapter-tile h2{font-size:18px}.chapter-tile .chapter-caption{font-size:10px;letter-spacing:1.5px}}
+@media(max-width:380px){.chapter-tile{min-height:215px}}
+@media(prefers-reduced-motion:reduce){.chapter-tile{transition:none}.chapter-tile:hover{transform:none}}
